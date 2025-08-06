@@ -4,11 +4,35 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-     <script src="js/task-1.js" defer></script>
+    <script src="js/task-1.js" defer></script>
     <script src="js/task-2.js" defer></script>
     <script src="js/task-3.js" defer></script>
   </head>
   <body>
-    
+    <h1>Результати задач</h1>
+
+  <h2>Задача 1</h2>
+  <pre id="task-1-output"></pre>
+
+  <h2>Задача 2</h2>
+  <pre id="task-2-output"></pre>
+
+  <h2>Задача 3</h2>
+  <pre id="task-3-output"></pre>
+
+  <script>
+    // Припускаємо, що кожен файл експортує відповідну функцію
+    if (typeof task1 === 'function') {
+      document.getElementById('task-1-output').textContent = task1();
+    }
+
+    if (typeof task2 === 'function') {
+      document.getElementById('task-2-output').textContent = task2();
+    }
+
+    if (typeof task3 === 'function') {
+      document.getElementById('task-3-output').textContent = task3();
+    }
+  </script>
   </body>
 </html>
